@@ -1,0 +1,2218 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+
+/* =========================================
+   ROOT
+========================================= */
+
+:root {
+
+  --background: #f5f5f3;
+
+  --surface: #ffffff;
+
+  --surface-soft: #f8f8f6;
+
+  --primary: #111827;
+
+  --primary-light: #1f2937;
+
+  --text: #111827;
+
+  --text-secondary: #4b5563;
+
+  --muted: #6b7280;
+
+  --border: #e5e7eb;
+
+  --border-dark: #d9dde3;
+
+  --gold: #c89b3c;
+
+  --gold-light: #f5ecd9;
+
+  --green: #16805c;
+
+  --green-light: #e7f4ee;
+
+  --red: #c24141;
+
+  --shadow:
+    0 8px 30px rgba(17, 24, 39, 0.055);
+
+  --shadow-hover:
+    0 18px 45px rgba(17, 24, 39, 0.09);
+
+}
+
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+
+  margin: 0;
+
+  min-width: 320px;
+
+  background: var(--background);
+
+  color: var(--text);
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+}
+
+button {
+  font-family: inherit;
+}
+
+.app {
+
+  min-height: 100vh;
+
+  background:
+
+    linear-gradient(
+      180deg,
+      #fafaf8 0%,
+      #f5f5f3 45%,
+      #f2f3f1 100%
+    );
+
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+
+  width:
+    min(
+      1180px,
+      calc(100% - 40px)
+    );
+
+  height: 76px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-bottom:
+    1px solid var(--border);
+
+}
+
+
+.brand {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+}
+
+
+.brand-mark {
+
+  width: 39px;
+
+  height: 39px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: var(--primary);
+
+  color: var(--gold);
+
+  border:
+    1px solid #374151;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+
+}
+
+
+.brand-info h1 {
+
+  margin: 0;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 19px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+
+}
+
+
+.brand-info span {
+
+  display: block;
+
+  margin-top: 2px;
+
+  color: var(--muted);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.6px;
+
+}
+
+
+.nav-right {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 27px;
+
+}
+
+
+.nav-item {
+
+  color: var(--muted);
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: default;
+
+}
+
+
+.nav-item.active {
+
+  color: var(--primary);
+
+}
+
+
+.system-live {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding:
+    8px 12px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 20px;
+
+  background: white;
+
+  color: var(--text-secondary);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.6px;
+
+}
+
+
+.system-dot {
+
+  width: 7px;
+
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--green);
+
+  box-shadow:
+    0 0 0 4px var(--green-light);
+
+}
+
+
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.dashboard {
+
+  width:
+    min(
+      1180px,
+      calc(100% - 40px)
+    );
+
+  margin: 0 auto;
+
+  padding:
+    44px 0 60px;
+
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+  min-height: 260px;
+
+  padding: 42px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+  border-radius: 14px;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #101722 0%,
+      #182333 58%,
+      #202b3a 100%
+    );
+
+  color: white;
+
+  box-shadow:
+    0 18px 45px
+    rgba(17, 24, 39, 0.15);
+
+}
+
+
+.hero::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 480px;
+
+  height: 480px;
+
+  right: -250px;
+
+  bottom: -350px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(200, 155, 60, 0.2);
+
+}
+
+
+.hero::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+
+  height: 300px;
+
+  right: -150px;
+
+  top: -180px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+
+}
+
+
+.hero-background-circle {
+
+  position: absolute;
+
+  width: 170px;
+
+  height: 170px;
+
+  right: 210px;
+
+  bottom: -100px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.04);
+
+}
+
+
+.hero-content {
+
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 620px;
+
+}
+
+
+.hero-kicker {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 18px;
+
+  color: #d7b76a;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+
+}
+
+
+.live-pulse {
+
+  width: 7px;
+
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #45b58a;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(69,181,138,0.12);
+
+}
+
+
+.hero h2 {
+
+  margin: 0;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size:
+    clamp(
+      42px,
+      5vw,
+      67px
+    );
+
+  line-height: 0.95;
+
+  letter-spacing: -3px;
+
+}
+
+
+.hero h2 span {
+
+  color: #d7b76a;
+
+}
+
+
+.hero-content p {
+
+  max-width: 500px;
+
+  margin:
+    22px 0 0;
+
+  color:
+    rgba(255,255,255,0.62);
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+}
+
+
+.hero-metrics {
+
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  gap: 10px;
+
+}
+
+
+.hero-metric {
+
+  min-width: 120px;
+
+  padding: 13px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.10);
+
+  border-radius: 9px;
+
+  background:
+    rgba(255,255,255,0.055);
+
+}
+
+
+.hero-metric svg {
+
+  color: #d7b76a;
+
+}
+
+
+.hero-metric span {
+
+  display: block;
+
+  color:
+    rgba(255,255,255,0.43);
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+}
+
+
+.hero-metric strong {
+
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 10px;
+
+  letter-spacing: 0.3px;
+
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.section {
+
+  margin-top: 55px;
+
+}
+
+
+.section-header {
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+
+}
+
+
+.section-label {
+
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--gold);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+
+}
+
+
+.section-title-row {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+}
+
+
+.section-title-row h2 {
+
+  margin: 0;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 26px;
+
+  letter-spacing: -1px;
+
+}
+
+
+.count-badge {
+
+  min-width: 22px;
+
+  height: 22px;
+
+  padding: 0 7px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background: var(--primary);
+
+  color: white;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+}
+
+
+.refresh-button {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding:
+    9px 14px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 8px;
+
+  background: white;
+
+  color: var(--text-secondary);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    0.2s ease;
+
+}
+
+
+.refresh-button:hover {
+
+  border-color:
+    var(--border-dark);
+
+  background:
+    var(--surface-soft);
+
+}
+
+
+.refresh-button:disabled {
+
+  opacity: 0.65;
+
+  cursor: wait;
+
+}
+
+
+.spinning {
+
+  animation:
+    spin 0.8s linear infinite;
+
+}
+
+
+/* =========================================
+   MATCH GRID
+========================================= */
+
+.matches-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 18px;
+
+}
+
+
+/* =========================================
+   MATCH CARD
+========================================= */
+
+.match-card {
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 22px;
+
+  background:
+    var(--surface);
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 13px;
+
+  box-shadow:
+    var(--shadow);
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+
+}
+
+
+.match-card:hover {
+
+  border-color:
+    #d2d6dc;
+
+  box-shadow:
+    var(--shadow-hover);
+
+}
+
+
+.match-accent {
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
+
+  height: 2px;
+
+  background:
+    var(--gold);
+
+}
+
+
+.match-header {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 24px;
+
+}
+
+
+.match-status {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: var(--green);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+}
+
+
+.status-light {
+
+  width: 7px;
+
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #a4a9ae;
+
+}
+
+
+.status-light.live {
+
+  background:
+    var(--green);
+
+  box-shadow:
+    0 0 0 4px
+    var(--green-light);
+
+}
+
+
+.venue {
+
+  max-width: 220px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  color: var(--muted);
+
+  font-size: 9px;
+
+}
+
+
+/* =========================================
+   TEAMS
+========================================= */
+
+.teams {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 17px;
+
+}
+
+
+.team-row {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+}
+
+
+.team-details {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+}
+
+
+.team-badge {
+
+  width: 40px;
+
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background:
+    var(--primary);
+
+  color:
+    white;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+}
+
+
+.team-badge.secondary {
+
+  background:
+    #eef0f2;
+
+  color:
+    var(--text-secondary);
+
+}
+
+
+.team-details strong {
+
+  display: block;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+}
+
+
+.team-details span {
+
+  display: block;
+
+  margin-top: 3px;
+
+  color: var(--muted);
+
+  font-size: 9px;
+
+}
+
+
+.score {
+
+  text-align: right;
+
+}
+
+
+.score strong {
+
+  display: block;
+
+  color: var(--primary);
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 27px;
+
+  line-height: 1;
+
+  letter-spacing: -1px;
+
+}
+
+
+.score small {
+
+  color: var(--muted);
+
+  font-size: 17px;
+
+}
+
+
+.score > span {
+
+  display: block;
+
+  margin-top: 5px;
+
+  color: var(--muted);
+
+  font-size: 9px;
+
+}
+
+
+/* =========================================
+   VS
+========================================= */
+
+.versus {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: #9ca3af;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+}
+
+
+.versus span {
+
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    var(--border);
+
+}
+
+
+/* =========================================
+   MATCH FOOTER
+========================================= */
+
+.match-footer {
+
+  margin-top: 22px;
+
+  padding-top: 14px;
+
+  border-top:
+    1px solid var(--border);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  color: var(--muted);
+
+  font-size: 9px;
+
+}
+
+
+.match-footer > div {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+}
+
+
+.match-footer svg {
+
+  color: var(--gold);
+
+}
+
+
+.live-text {
+
+  color: var(--green);
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+}
+
+
+/* =========================================
+   PLAYER GRID
+========================================= */
+
+.players-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 16px;
+
+}
+
+
+.player-card {
+
+  padding: 20px;
+
+  background:
+    var(--surface);
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 12px;
+
+  box-shadow:
+    var(--shadow);
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+
+}
+
+
+.player-card:hover {
+
+  border-color:
+    #d2d6dc;
+
+  box-shadow:
+    var(--shadow-hover);
+
+}
+
+
+.player-header {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+}
+
+
+.player-avatar {
+
+  width: 40px;
+
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background:
+    var(--primary);
+
+  color:
+    #d7b76a;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+}
+
+
+.player-info h3 {
+
+  margin: 0;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 14px;
+
+}
+
+
+.player-info p {
+
+  margin:
+    4px 0 0;
+
+  color:
+    var(--muted);
+
+  font-size: 9px;
+
+}
+
+
+.player-stats {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  margin-top: 21px;
+
+  padding-top: 17px;
+
+  border-top:
+    1px solid var(--border);
+
+}
+
+
+.player-stat {
+
+  padding-left: 10px;
+
+  border-right:
+    1px solid var(--border);
+
+}
+
+
+.player-stat:first-child {
+
+  padding-left: 0;
+
+}
+
+
+.player-stat:last-child {
+
+  border-right: none;
+
+}
+
+
+.player-stat span {
+
+  display: block;
+
+  margin-bottom: 5px;
+
+  color:
+    var(--muted);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+
+}
+
+
+.player-stat strong {
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 18px;
+
+}
+
+
+/* =========================================
+   SYSTEM PANEL
+========================================= */
+
+.system-panel {
+
+  margin-top: 55px;
+
+  padding:
+    18px 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  background:
+    white;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 11px;
+
+  box-shadow:
+    0 5px 20px
+    rgba(17,24,39,0.03);
+
+}
+
+
+.system-main {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+}
+
+
+.system-icon {
+
+  width: 35px;
+
+  height: 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background:
+    var(--gold-light);
+
+  color:
+    #a27a25;
+
+}
+
+
+.system-main h3 {
+
+  margin: 0;
+
+  font-size: 12px;
+
+}
+
+
+.system-main p {
+
+  margin:
+    3px 0 0;
+
+  color:
+    var(--muted);
+
+  font-size: 9px;
+
+}
+
+
+.system-services {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+}
+
+
+.system-services > div {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color:
+    var(--muted);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.4px;
+
+}
+
+
+.system-services svg {
+
+  color:
+    var(--green);
+
+}
+
+
+.online-service span {
+
+  width: 6px;
+
+  height: 6px;
+
+  border-radius: 50%;
+
+  background:
+    var(--green);
+
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.error-card {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+
+  padding:
+    16px 18px;
+
+  background:
+    #fffafa;
+
+  border:
+    1px solid #ecd4d4;
+
+  border-radius: 10px;
+
+}
+
+
+.error-icon {
+
+  width: 28px;
+
+  height: 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    #f9e3e3;
+
+  color:
+    var(--red);
+
+  font-weight: 700;
+
+}
+
+
+.error-card strong {
+
+  font-size: 11px;
+
+}
+
+
+.error-card p {
+
+  margin:
+    3px 0 0;
+
+  color:
+    var(--muted);
+
+  font-size: 9px;
+
+}
+
+
+/* =========================================
+   EMPTY / LOADING
+========================================= */
+
+.state-card {
+
+  grid-column:
+    1 / -1;
+
+  padding:
+    50px 30px;
+
+  text-align: center;
+
+  background:
+    white;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 12px;
+
+}
+
+
+.state-card h3 {
+
+  margin:
+    12px 0 5px;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 15px;
+
+}
+
+
+.state-card p {
+
+  margin: 0;
+
+  color:
+    var(--muted);
+
+  font-size: 10px;
+
+}
+
+
+.state-icon {
+
+  width: 45px;
+
+  height: 45px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background:
+    var(--gold-light);
+
+  color:
+    #a27a25;
+
+}
+
+
+.loader {
+
+  width: 25px;
+
+  height: 25px;
+
+  margin:
+    0 auto 12px;
+
+  border:
+    2px solid var(--border);
+
+  border-top-color:
+    var(--gold);
+
+  border-radius: 50%;
+
+  animation:
+    spin 0.8s linear infinite;
+
+}
+
+
+@keyframes spin {
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+  width:
+    min(
+      1180px,
+      calc(100% - 40px)
+    );
+
+  margin:
+    0 auto;
+
+  padding:
+    24px 0 34px;
+
+  border-top:
+    1px solid var(--border);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  color:
+    var(--muted);
+
+  font-size: 9px;
+
+}
+
+
+footer strong {
+
+  color:
+    var(--primary);
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+}
+
+
+footer p {
+
+  margin: 0;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+  }
+
+  .hero-metrics {
+
+    width: 100%;
+
+  }
+
+  .hero-metric {
+
+    flex: 1;
+
+  }
+
+  .players-grid {
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+  }
+
+  .system-panel {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .navbar,
+  .dashboard,
+  footer {
+
+    width:
+      calc(100% - 24px);
+
+  }
+
+  .nav-item {
+
+    display: none;
+
+  }
+
+  .dashboard {
+
+    padding-top: 25px;
+
+  }
+
+  .hero {
+
+    padding: 28px 23px;
+
+  }
+
+  .hero h2 {
+
+    font-size: 45px;
+
+    letter-spacing: -2px;
+
+  }
+
+  .hero-metrics {
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(3, 1fr);
+
+  }
+
+  .hero-metric {
+
+    min-width: 0;
+
+    padding: 10px;
+
+  }
+
+  .hero-metric svg {
+
+    display: none;
+
+  }
+
+  .matches-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .players-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .section-header {
+
+    align-items: flex-start;
+
+  }
+
+  .system-services {
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+  }
+
+  footer {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+  }
+
+}
+
+
+@media (max-width: 450px) {
+
+  .hero-metrics {
+
+    gap: 6px;
+
+  }
+
+  .hero-metric strong {
+
+    font-size: 8px;
+
+  }
+
+  .hero-metric span {
+
+    font-size: 6px;
+
+  }
+
+  .team-badge {
+
+    width: 35px;
+
+    height: 35px;
+
+  }
+
+  .team-details strong {
+
+    font-size: 13px;
+
+  }
+
+  .score strong {
+
+    font-size: 23px;
+
+  }
+
+}
+/* =========================================
+   CRICKET HERO ANIMATION
+========================================= */
+
+.cricket-animation {
+  position: absolute;
+
+  right: 40px;
+  top: 35px;
+
+  width: 420px;
+  height: 180px;
+
+  pointer-events: none;
+
+  opacity: 0.85;
+}
+
+
+/* -----------------------------
+   CRICKET PITCH
+----------------------------- */
+
+.pitch {
+
+  position: absolute;
+
+  right: 10px;
+  bottom: 10px;
+
+  width: 280px;
+  height: 90px;
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,0.10);
+
+  transform:
+    perspective(350px)
+    rotateX(55deg);
+
+}
+
+
+/* Pitch center */
+
+.pitch::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  top: 0;
+
+  width: 110px;
+  height: 80px;
+
+  transform: translateX(-50%);
+
+  background:
+    rgba(200,155,60,0.035);
+
+  border-left:
+    1px solid
+    rgba(200,155,60,0.10);
+
+  border-right:
+    1px solid
+    rgba(200,155,60,0.10);
+
+}
+
+
+/* -----------------------------
+   CREASES
+----------------------------- */
+
+.crease {
+
+  position: absolute;
+
+  width: 38px;
+  height: 1px;
+
+  background:
+    rgba(255,255,255,0.18);
+
+}
+
+
+.crease-one {
+
+  left: 28px;
+  top: 27px;
+
+}
+
+
+.crease-two {
+
+  right: 28px;
+  top: 27px;
+
+}
+
+
+/* -----------------------------
+   CRICKET BALL
+----------------------------- */
+
+.cricket-ball {
+
+  position: absolute;
+
+  left: 20px;
+  top: 65px;
+
+  width: 19px;
+  height: 19px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #7b1e1e 0%,
+      #8d2424 45%,
+      #531313 100%
+    );
+
+  box-shadow:
+    0 5px 12px
+    rgba(0,0,0,0.25);
+
+}
+
+
+/* Cricket seam */
+
+.cricket-ball::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 2px;
+  left: 8px;
+
+  width: 2px;
+  height: 15px;
+
+  border-left:
+    1px dashed
+    rgba(255,255,255,0.65);
+
+  transform:
+    rotate(32deg);
+
+}
+
+
+/* Ball highlight */
+
+.cricket-ball::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 4px;
+  height: 4px;
+
+  left: 4px;
+  top: 4px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,0.25);
+
+}
+
+
+/* =========================================
+   LIVE MATCH ANIMATION
+========================================= */
+
+.match-card:has(.status-light.live) {
+
+  --live-glow:
+    rgba(22,128,92,0.10);
+
+}
+
+
+.match-card:has(.status-light.live)::after {
+
+  content: "";
+
+  position: absolute;
+
+  top: 2px;
+  left: -100%;
+
+  width: 60%;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(22,128,92,0.45),
+      transparent
+    );
+
+  animation:
+    live-sweep 4s ease-in-out infinite;
+
+}
+
+
+@keyframes live-sweep {
+
+  0% {
+    left: -60%;
+  }
+
+  45% {
+    left: 110%;
+  }
+
+  100% {
+    left: 110%;
+  }
+
+}
+
+
+/* =========================================
+   LIVE SCORE PULSE
+========================================= */
+
+.match-card:has(.status-light.live) .score strong {
+
+  animation:
+    score-breathe 3s ease-in-out infinite;
+
+}
+
+
+@keyframes score-breathe {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.025);
+  }
+
+}
+
+
+/* =========================================
+   LIVE DOT
+========================================= */
+
+.status-light.live {
+
+  animation:
+    live-dot 1.8s ease-in-out infinite;
+
+}
+
+
+@keyframes live-dot {
+
+  0%,
+  100% {
+
+    box-shadow:
+      0 0 0 3px
+      rgba(22,128,92,0.08);
+
+  }
+
+  50% {
+
+    box-shadow:
+      0 0 0 6px
+      rgba(22,128,92,0.03);
+
+  }
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .cricket-animation {
+
+    right: 15px;
+
+    opacity: 0.45;
+
+    transform:
+      scale(0.75);
+
+    transform-origin:
+      right top;
+
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .cricket-animation {
+
+    display: none;
+
+  }
+
+}
